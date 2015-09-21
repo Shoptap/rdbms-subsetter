@@ -292,9 +292,9 @@ class Db(object):
                 if prioritized:
                     child.target.required.append((desired_row, prioritized))
                 elif (n == 0):
-                    child.target.requested.appendleft((desired_row, prioritized))
+                    child.target.required.appendleft((desired_row, prioritized))
                 else:
-                    child.target.requested.append((desired_row, prioritized))
+                    child.target.required.append((desired_row, prioritized))
 
     @property
     def pending(self):
